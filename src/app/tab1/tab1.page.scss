@@ -1,0 +1,170 @@
+:host ::ng-deep {
+    // left: 0px;
+    // top: 0px;
+    // padding-left: 90px;
+    // padding-right: 90px;
+    // padding-top: var(--padding-top);
+    // padding-bottom: var(--padding-bottom);
+    // position: absolute;
+    width: auto;
+    height: auto;
+    // transform: translateZ(0px);
+    // font-size: 17px;
+    // font-weight: 600;
+    // text-align: center;
+    // box-sizing: border-box;
+    // pointer-events: none;
+}
+
+.wishes-date {
+    margin-top: 5%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #075E55;
+
+}
+
+.heart {
+    @extend .wishes-date;
+    margin-top: 2%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #075E55;
+    fill: red;
+    position: relative;
+    top: 5px;
+    width: 50px;
+    animation: pulse 1s ease infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+body {
+    background-color: #c4c4c4;
+
+}
+
+.text {
+    position: absolute;
+    // top: 50%; 
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 2em;
+    font-weight: 700;
+    color: #075E55;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+        1px 18px 6px rgba(16, 16, 16, 0.4),
+        1px 22px 10px rgba(16, 16, 16, 0.2),
+        1px 25px 35px rgba(16, 16, 16, 0.2),
+        1px 30px 60px rgba(16, 16, 16, 0.4);
+}
+
+#spinner {
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    transform-style: preserve-3d;
+    text-align: center;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+
+
+.heart>.text-spin {
+    animation-name: cyclic 5s;
+}
+
+@keyframes cyclic {
+    0% {
+        transform: translate(90%);
+        margin-top: -200px;
+    }
+
+    20% {
+        transform: translate(180%);
+        margin-top: -150px;
+    }
+
+    60% {
+        transform: translate(270%);
+        margin-top: -100px;
+    }
+
+    80% {
+        transform: translate(360%);
+        margin-top: -50px
+    }
+
+    100% {
+        transform: translate(360%);
+        margin-top: 0px
+    }
+
+}
+
+
+.img-style {
+    animation: border-line;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    transform-style: preserve-3d;
+    text-align: center;
+}
+
+@keyframes border-line {
+    0% {
+        border-bottom: 3px solid red;
+    }
+
+    25% {
+        border-left: 3px solid red;
+    }
+
+    75% {
+        border-top: 3px solid red;
+    }
+
+    100% {
+        border-right: 3px solid red;
+    }
+}
