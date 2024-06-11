@@ -1,0 +1,7 @@
+{
+  "name": "bday-wishes",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

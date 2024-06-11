@@ -1,0 +1,5 @@
+make build APK from android studio
+
+1. npm install --save @capacitor/core @capacitor/cli
+2.npx cap sync android
+3. Android Studio - File ->Sync Project With Gradle Files
